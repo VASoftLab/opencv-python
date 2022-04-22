@@ -99,11 +99,11 @@ def on_hsv_hiv(val):
 
 if __name__ == '__main__':
 
-    enable_correction = False
+    enable_correction = True
 
-    img_original = cv2.imread('img\\L1036.jpg', cv2.IMREAD_COLOR)
+    # img_original = cv2.imread('img\\L1038.jpg', cv2.IMREAD_COLOR)
     # img_original = cv2.imread('img\\ubuntu.jpg', cv2.IMREAD_COLOR)
-    # img_original = cv2.imread('img\\pepsi.jpg', cv2.IMREAD_COLOR)
+    img_original = cv2.imread('img\\pepsi.jpg', cv2.IMREAD_COLOR)
 
     img_original_small = cv2.resize(img_original, (640, 400))
 
@@ -112,7 +112,12 @@ if __name__ == '__main__':
     cv2.imshow('Original image', img_original_small)
 
     if enable_correction:
-        hih = 21
+        lowh = 0
+        lows = 40
+        lowv = 10
+        hih = 5
+        his = 255
+        hiv = 255
         img_original = cv2.cvtColor(img_original, cv2.COLOR_BGR2YCrCb)
         img_original[:, :, 0] = cv2.equalizeHist(img_original[:, :, 0])
         img_corrected = cv2.cvtColor(img_original, cv2.COLOR_YCrCb2BGR)
