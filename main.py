@@ -28,7 +28,7 @@ if __name__ == '__main__':
     print_modules_version()
 
     # Load an original imag
-    img_original = cv2.imread('img\\L1035.jpg', cv2.IMREAD_COLOR)
+    img_original = cv2.imread('/home/va/Sources/opencv-python/img/L1030.jpg', cv2.IMREAD_COLOR)
 
     # Convert imag from BGR to the new format
     img_converted = cv2.cvtColor(img_original, cv2.COLOR_BGR2YCrCb)

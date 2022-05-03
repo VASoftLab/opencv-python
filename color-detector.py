@@ -101,9 +101,9 @@ if __name__ == '__main__':
 
     enable_correction = True
 
-    # img_original = cv2.imread('img\\L1038.jpg', cv2.IMREAD_COLOR)
-    img_original = cv2.imread('img\\ubuntu.jpg', cv2.IMREAD_COLOR)
-    # img_original = cv2.imread('img\\pepsi.jpg', cv2.IMREAD_COLOR)
+    # img_original = cv2.imread('/home/va/Sources/opencv-python/img/L1030.jpg', cv2.IMREAD_COLOR)
+    img_original = cv2.imread('/home/va/Sources/opencv-python/img/ubuntu.jpg', cv2.IMREAD_COLOR)
+    # img_original = cv2.imread('/home/va/Sources/opencv-python/img/pepsi.jpg', cv2.IMREAD_COLOR)
 
     img_original_small = cv2.resize(img_original, (640, 400))
 
@@ -115,7 +115,7 @@ if __name__ == '__main__':
         low_h = 0
         low_s = 40
         low_v = 10
-        hi_h = 5 # 21 for ubuntu and pepsi
+        hi_h = 21 # 21 for ubuntu and pepsi 5 otherwise
         hi_s = 255
         hi_v = 255
         img_original = cv2.cvtColor(img_original, cv2.COLOR_BGR2YCrCb)
